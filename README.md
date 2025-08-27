@@ -1,6 +1,6 @@
 # AutoStop for Spotify
 
-**AutoStop** is a Python script for **Windows** that automatically pauses Spotify whenever it detects audio from other applications (e.g., YouTube, games) and resumes playback once that audio stops.  
+**AutoStop** is a Python script for **Windows** that automatically pauses Spotify whenever it detects audio from other applications like youtube and resumes playback once that audio stops.  
 Background processes like **Discord** or **NVIDIA Container** are ignored so they don’t accidentally pause Spotify.
 
 ---
