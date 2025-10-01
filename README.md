@@ -34,6 +34,7 @@ Background processes like **Discord** or **NVIDIA Container** are ignored so the
    ```powershell
    python -u auto_spotify_stop.py
    ```
+   - Run `--noconsole`  so u only see activity in the log file.
 4. Keep it running in the background:
    - When external audio is detected (e.g., YouTube in Brave/Chrome), Spotify is paused.
    - When external audio stops, Spotify resumes after a short delay.
@@ -65,23 +66,9 @@ Inside the script, you can tune the following:
 
 ---
 
-## Build as an `.exe` (optional)
-
-You can package the script into a standalone executable with **PyInstaller**:
-
-```powershell
-pyinstaller --onefile --collect-all winsdk --collect-all pycaw auto_spotify_stop.py
-```
-
-- The compiled binary will be in `dist\auto_spotify_stop.exe`.
-- Use Windows Task Scheduler to run it automatically at login.
-
----
-
 ## Limitations
 
 - Works only with the **Spotify desktop app** (not the web player).
 - If different apps output to **different audio devices**, PyCAW may not detect them as “external”.
-- Running with `--noconsole` means you’ll only see activity in the log file.
 
 ---
